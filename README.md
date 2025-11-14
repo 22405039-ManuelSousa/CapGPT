@@ -1,73 +1,63 @@
-# Welcome to your Lovable project
+Truth Compass is a proof-of-concept app that uses AI to analyze text and voice to detect possible inconsistencies or signs of deception in social interactions. The app is intended for research and testing purposes only.
 
-## Project info
+Features
 
-**URL**: https://lovable.dev/projects/e7a226bc-b3a6-46a1-87c2-e62dfd4693c9
+Analyze text input to detect possible lies or evasions.
 
-## How can I edit this code?
+Analyze voice recordings to detect stress, hesitation, or vocal cues.
 
-There are several ways of editing your application.
+Provide a combined “truth score” based on text and audio.
 
-**Use Lovable**
+Highlight words or phrases that contribute most to the score.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/e7a226bc-b3a6-46a1-87c2-e62dfd4693c9) and start prompting.
+Installation
 
-Changes made via Lovable will be committed automatically to this repo.
+Clone the repository:
 
-**Use your preferred IDE**
+git clone <your-repo-url>
+cd truth-compass-main
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+Install dependencies:
 
-Follow these steps:
+npm install
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+Run in development mode:
 
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
 npm run dev
-```
 
-**Edit a file directly in GitHub**
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+Make sure a package.json exists and contains "dev" script, e.g., "dev": "next dev" if using Next.js.
 
-**Use GitHub Codespaces**
+Usage
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+Input a text phrase or upload a voice recording.
 
-## What technologies are used for this project?
+The AI model returns a score from 0–1, where:
 
-This project is built with:
+0–0.3: Likely truthful
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+0.3–0.7: Inconclusive / possible evasions
 
-## How can I deploy this project?
+0.7–1.0: Possible inconsistency / lie
 
-Simply open [Lovable](https://lovable.dev/projects/e7a226bc-b3a6-46a1-87c2-e62dfd4693c9) and click on Share -> Publish.
+Review the highlighted words or vocal features for insights.
 
-## Can I connect a custom domain to my Lovable project?
+Important Notes
 
-Yes, you can!
+This project is experimental. It does not guarantee detection of lies.
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+Use responsibly, with consent from participants.
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Scores are probabilistic, based on patterns in text and audio, not certainty.
+
+Future Improvements
+
+Add video/micro-expression analysis.
+
+Improve AI models for multilingual support.
+
+Integrate user dashboards for analysis over time.
+
+Deploy as a web app on Vercel or other cloud platforms.
