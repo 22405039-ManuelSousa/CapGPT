@@ -1,4 +1,4 @@
-Truth Compass is a proof-of-concept app that uses AI to analyze text and voice to detect possible inconsistencies or signs of deception in social interactions. The app is intended for research and testing purposes only.
+CapGPT is a proof-of-concept app that uses AI to analyze text and voice to detect possible inconsistencies or signs of deception in social interactions. The app is intended for research and testing purposes only.
 
 Features
 
